@@ -1,16 +1,3 @@
-/*!
-=========================================================
-* Steller Landing page
-=========================================================
-
-* Copyright: 2019 DevCRUD (https://devcrud.com)
-* Licensed: (https://devcrud.com/licenses)
-* Coded by www.devcrud.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 :root {
   --blue: #79A9F5;
   --indigo: #C45F90;
@@ -622,7 +609,7 @@ pre code {
 .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
 .col-xl-auto {
   position: relative;
-  width: 100%;
+  width: 80%;
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -11174,7 +11161,7 @@ pre {
 
 .custom-card .card-body i {
   display: block;
-  font-size: 40px;
+  font-size: 30px;
   margin-bottom: 18px;
   color: #ff7a57;
 }
