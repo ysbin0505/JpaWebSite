@@ -38,5 +38,18 @@ public class CounselService {
     }
   }
 
+  public Counsel findOne(Long counselId){
+    return counselRepository.findOne(counselId);
+  }
+
+
+  @Transactional
+  public void update(Long id, String email, String context){
+    Counsel counsel = counselRepository.findOne(id);
+    counsel.setEmail(email);
+    counsel.setContext(context);
+  }
+
+
 
 }

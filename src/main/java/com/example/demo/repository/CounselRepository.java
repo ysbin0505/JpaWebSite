@@ -17,6 +17,10 @@ public class CounselRepository {
     em.persist(counsel);
   }
 
+  public Counsel findOne(Long id){
+    return em.find(Counsel.class, id);
+  }
+
   public List<Counsel> findByemail(String email){
     return em.createQuery("select c from Counsel c where c.email = :email", Counsel.class)
         .setParameter("email",  email).getResultList();
