@@ -42,6 +42,10 @@ public class CounselService {
     return counselRepository.findOne(counselId);
   }
 
+  public List<Counsel> findCounsels(){
+    return counselRepository.findAll(); //전체 조회
+  }
+
 
   @Transactional
   public void update(Long id, String email, String context){

@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
+import java.util.List;
+import java.util.stream.Collectors;
+
 @RestController
 @RequiredArgsConstructor
 public class CounselApiController {
@@ -62,6 +65,30 @@ public class CounselApiController {
     private String email;
     private String context;
   }
+
+  @GetMapping("/api/v1/counsels")
+    public Result counselsV1(){
+      List<Counsel> findCounsels = counselService.findCounsels();
+      List<CounselDto> collect = findCounsels.stream()
+          .map(c -> new CounselDto(c.getEmail(), c.getContext()))
+          .collect(Collectors.toList());
+
+      return new Result(collect);
+    }
+
+  @Data
+  @AllArgsConstructor
+  static class Result<T>{
+    private T data;
+  }
+
+  @Data
+  @AllArgsConstructor
+  static class CounselDto{
+    private String email;
+    private String context;
+  }
+
 }
 
 
