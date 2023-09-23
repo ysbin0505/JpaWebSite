@@ -22,7 +22,6 @@ public class CounselController {
     return "index";
   }
 
-
   @PostMapping(value = "/counsels/new")
   public String create(@Valid CounselForm form, BindingResult result) {
     counselService.saveCounsel(form);

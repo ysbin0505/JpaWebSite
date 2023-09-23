@@ -53,7 +53,4 @@ public class CounselService {
     counsel.setEmail(email);
     counsel.setContext(context);
   }
-
-
-
 }
